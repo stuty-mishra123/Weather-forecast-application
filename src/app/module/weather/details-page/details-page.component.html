@@ -1,0 +1,74 @@
+<!-- <ng-container *ngIf="templateData">
+  <div class="container-fluid banner">
+    <p>{{title}}</p>
+  </div>
+  <div class="table-container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Date</th>
+          <th scope="col">Temperature</th>
+          <th scope="col">Sea level</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let dateObj of templateData">
+          <td></td>
+          <td>{{dateObj.dt_txt}}</td>
+          <td>{{dateObj.main.temp}}</td>
+          <td>{{dateObj.main.sea_level}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container> -->
+<section class="vh-100 bg-secondary" *ngIf="templateData">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-12 col-xl-10">
+
+        <div class="card shadow-0 border border-dark border-5 text-dark" style="border-radius: 10px;">
+          <div class="card-body p-4">
+
+            <div class="row text-center">
+              <div class="col-md-9 text-center border-end border-5 border-dark py-4" style="margin-top: -1.5rem; margin-bottom: -1.5rem;">
+                <!-- <div class="d-flex justify-content-around mt-3">
+                  <p class="small">{{title}}</p>
+                </div> -->
+                <div class="d-flex justify-content-around align-items-center py-5 my-4">
+                  <p class="fw-bold mb-0" style="font-size: 2rem;">{{title}}</p>
+                 <!--  <div class="text-start">
+                    <p class="small">10:00</p>
+                    <p class="h3 mb-3">Sunday</p>
+                    <p class="small mb-0">Cloudy</p>
+                  </div> -->
+                </div>
+                <div class="d-flex justify-content-around align-items-center mb-3">
+                  <div class="flex-column">
+                    <i class="fas fa-minus"></i>
+                  </div>
+                  <div class="flex-column border" style="border-radius: 10px; padding: .75rem" *ngFor="let dateObj of templateData">
+                    <p class="small mb-1">{{dateObj.dt_txt | date:'EEEE'}}</p>
+                    <p class="small mb-0"><strong>{{dateObj.main.temp}}° C</strong></p>
+                  </div>
+                  <div class="flex-column">
+                    <i class="fas fa-minus"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 text-end">
+                <p class="fw-bold mb-5 mt-2" style="font-size: 1rem;">Sea level</p>
+                <p class="pb-1" *ngFor="let dateObj of templateData">
+                  <span class="pe-2">{{dateObj.dt_txt | date:'EEEE'}}</span>  <strong>{{dateObj.main.sea_level}}</strong>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

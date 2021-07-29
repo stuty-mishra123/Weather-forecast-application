@@ -1,0 +1,15 @@
+.bg-clr{
+    background-color: #cdc4f9;
+}
+.container-fluid{
+    display: flex;
+}
+.banner {
+    background-color: #6c757d!important;
+    color: white;
+    text-align: center;
+}
+.container-fluid .card{
+    max-width: 18em;
+    margin: 10px;
+}

@@ -1,0 +1,19 @@
+<div *ngIf="cityData" class="bg-clr vh-100">
+  <div class="d-flex justify-content-around align-items-center py-5 my-4 text-white bg-secondary">
+    <p class="fw-bold mb-0" style="font-size: 2rem;">{{title}}</p>
+  </div>
+  <div class="container-fluid">
+    <div class="card text-white  mb-3" *ngFor="let data of cityData odd as isOdd; even as isEven;" (click)="navigateTodetails(data.id)" [ngClass]="{ 'bg-light': idOdd, 'bg-secondary': isEven , 'text-white': isEven}">
+      <div class="card-header"><h5>{{data.name}}</h5></div>
+      <div class="card-body">
+        <div class="d-flex flex-column temp mb-3">
+          <h2 class="mb-0 font-weight-bold" id="heading"> {{data.main.temp}}° C</h2>
+        </div>
+        <p class="card-text">Sunrise: {{data.sys.sunrise | date:'fullTime'}}</p>
+        <p class="card-text">Sunset: {{data.sys.sunset | date:'fullTime'}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,16 @@
+.bg-clr{
+    background-color: #cdc4f9;
+}
+.banner{
+    background-color: darkgray;
+    text-align: center;
+    color: white;
+}
+.table-container{
+    display: flex;
+    justify-content: center;
+    top:20%
+}
+.table-container .table{
+    width:50%
+}
